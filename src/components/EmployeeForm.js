@@ -3,40 +3,40 @@ import { states } from "../utils";
 
 const EmployeeForm = () => {
   return (
-    <form action="#" id="create-employee">
-      <label for="first-name">First Name</label>
+    <form action="#" data-testid="employee-form" id="create-employee">
+      <label htmlFor="first-name">First Name</label>
       <input type="text" id="first-name" />
 
-      <label for="last-name">Last Name</label>
+      <label htmlFor="last-name">Last Name</label>
       <input type="text" id="last-name" />
 
-      <label for="date-of-birth">Date of Birth</label>
+      <label htmlFor="date-of-birth">Date of Birth</label>
       <input id="date-of-birth" type="date" />
 
-      <label for="start-date">Start Date</label>
+      <label htmlFor="start-date">Start Date</label>
       <input id="start-date" type="date" />
 
       <fieldset className="address">
         <legend>Address</legend>
 
-        <label for="street">Street</label>
+        <label htmlFor="street">Street</label>
         <input id="street" type="text" />
 
-        <label for="city">City</label>
+        <label htmlFor="city">City</label>
         <input id="city" type="text" />
 
-        <label for="state">State</label>
+        <label htmlFor="state">State</label>
         <select name="state" id="state">
           {states.map((state) => (
-            <option>{state.name}</option>
+            <option key={state.abbreviation}>{state.name}</option>
           ))}
         </select>
 
-        <label for="zip-code">Zip Code</label>
+        <label htmlFor="zip-code">Zip Code</label>
         <input id="zip-code" type="number" />
       </fieldset>
 
-      <label for="department">Department</label>
+      <label htmlFor="department">Department</label>
       <select name="department" id="department">
         <option>Sales</option>
         <option>Marketing</option>
@@ -44,7 +44,7 @@ const EmployeeForm = () => {
         <option>Human Resources</option>
         <option>Legal</option>
       </select>
-      <button onclick="saveEmployee()">Save</button>
+      <button >Save</button>
     </form>
   );
 };

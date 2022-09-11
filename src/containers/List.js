@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 
 const List = () => {
   return (
-    <div id="employee-div" class="container">
+    <div id="employee-div" className="container">
       <h3>Current Employees</h3>
-      <table id="employee-table" class="display"></table>
-      <Link to={'/new'}>New</Link>
+      <table id="employee-table" className="display"></table>
+      <Link to={"/new"} data-testid="form-link">
+        New
+      </Link>
     </div>
   );
 };
