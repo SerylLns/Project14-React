@@ -1,1 +1,2 @@
-[![Codecov](https://img.shields.io/codecov/c/github/Seryllns/p14-react)](https://codecov.io/gh/Seryllns/p14-react)  
+
+[![codecov](https://codecov.io/gh/Seryllns/p14-react/branch/master/graph/badge.svg)](https://codecov.io/gh/dyarleniber/Seryllns/p14-react)
