@@ -1,2 +1,1 @@
-## Code coverage
-[![CI/CD](https://github.com/SerylLns/Project14-React/workflows/CI/CD/badge.svg)](https://codecov.io/gh/Seryllns/react-workflow-gh-actions)
+[![Codecov](https://img.shields.io/codecov/c/github/Seryllns/p14-react)](https://codecov.io/gh/Seryllns/p14-react)  
