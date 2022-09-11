@@ -3,8 +3,7 @@ import {
   screen,
 } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
-import App from "./App";
-import List from "./containers/List";
+import App from "../App";
 
 test("renders Homepage to root", async () => {
   render(
@@ -12,7 +11,6 @@ test("renders Homepage to root", async () => {
       <App></App>
     </MemoryRouter>
   );
-
   
   expect(screen.getByTestId("form-link")).toHaveTextContent("New");
 });

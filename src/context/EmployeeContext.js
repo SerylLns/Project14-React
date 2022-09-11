@@ -1,11 +1,17 @@
 import { createContext, useState } from "react";
 
-const EmployeeContext = createContext([]);
+export const EmployeeContext = createContext([]);
 
 const EmployeeProvider = ({ children }) => {
   const [employees, setEmployees] = useState([]);
+
+  const addUser = (user) => {
+    const newEmployees = [...employees, user];
+    setEmployees(newEmployees);
+  };
+
   return (
-    <EmployeeContext.Provider value={{ employees, setEmployees }}>
+    <EmployeeContext.Provider value={{ employees, setEmployees, addUser }}>
       {children}
     </EmployeeContext.Provider>
   );
