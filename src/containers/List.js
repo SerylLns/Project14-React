@@ -16,8 +16,10 @@ const List = () => {
   const columnHelper = createColumnHelper()
 
   const columns = [
-    columnHelper.accessor("firstName", {
-      cell: (info) => info.getValue(),
+    columnHelper.accessor((row) => row.firstName, {
+      id: "firstName",
+      cell: (info) => <i>{info.getValue()}</i>,
+      header: () => <span>First Name</span>,
     }),
     columnHelper.accessor((row) => row.lastName, {
       id: "lastName",
@@ -25,11 +27,42 @@ const List = () => {
       header: () => <span>Last Name</span>,
     }),
     columnHelper.accessor((row) => row.city, {
+      id: "startDate",
+      cell: (info) => <i>{info.getValue()}</i>,
+      header: () => <span>Start Date</span>,
+    }),
+    columnHelper.accessor((row) => row.department, {
+      id: "department",
+      cell: (info) => <i>{info.getValue()}</i>,
+      header: () => <span>Department</span>,
+    }),
+    columnHelper.accessor((row) => row.birthdate, {
+      id: "dateOfBirth",
+      cell: (info) => <i>{info.getValue()}</i>,
+      header: () => <span>Date of Birth</span>,
+    }),
+    columnHelper.accessor((row) => row.street, {
+      id: "street",
+      cell: (info) => <i>{info.getValue()}</i>,
+      header: () => <span>Street</span>,
+    }),
+    columnHelper.accessor((row) => row.city, {
       id: "city",
       cell: (info) => <i>{info.getValue()}</i>,
-      header: () => <span>city</span>,
+      header: () => <span>City</span>,
+    }),
+    columnHelper.accessor((row) => row.state, {
+      id: "state",
+      cell: (info) => <i>{info.getValue()}</i>,
+      header: () => <span>State</span>,
+    }),
+    columnHelper.accessor((row) => row.zipCode, {
+      id: "zipCode",
+      cell: (info) => <i>{info.getValue()}</i>,
+      header: () => <span>Zip Code</span>,
     }),
   ];
+
 
 
 
