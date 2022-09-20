@@ -1,11 +1,13 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 import { states } from "../utils";
 import { useFormik } from "formik";
 import { employeeSchema } from "../validations/EmployeeValidation";
-import { EmployeeContext } from "../context/EmployeeContext";
+// import { EmployeeContext } from "../context/EmployeeContext";
+import { useDispatch } from "react-redux";
+import { addEmployee } from "../features/employeeSlice";
 
 const EmployeeForm = () => {
-  const { addUser } = useContext(EmployeeContext);
+  const dispatch = useDispatch();
 
   const formik = useFormik({
     initialValues: {
@@ -22,7 +24,9 @@ const EmployeeForm = () => {
     validationSchema: employeeSchema,
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
-      addUser(formik.values);
+      console.log("Formik value:", formik.values);
+      dispatch(addEmployee(formik.values));
+      // addUser(formik.values);
     },
   });
   return (

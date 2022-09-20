@@ -11,5 +11,3 @@ export const employeeSchema = object().shape({
   zipCode: number().required("zipCode required"),
   department: string().min(3).required("Department required"),
 });
-
-// const employee = employeeSchema.validate()

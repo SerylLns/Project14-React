@@ -6,11 +6,10 @@ import {
   getCoreRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { EmployeeContext } from "../context/EmployeeContext";
+import { useSelector } from "react-redux";
 
 const List = () => {
-  const { employees } = useContext(EmployeeContext)
-  console.log(employees);
+  const employees = useSelector(state => state.employees);
   const data = [...employees];
 
   const columnHelper = createColumnHelper()
