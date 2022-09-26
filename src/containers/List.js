@@ -74,7 +74,7 @@ const List = () => {
   return (
     <div id="employee-div" className="container">
       <h3>Current Employees</h3>
-      <table>
+      <table data-testid="list-table">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
@@ -95,7 +95,7 @@ const List = () => {
           {table.getRowModel().rows.map((row) => (
             <tr key={row.id}>
               {row.getVisibleCells().map((cell) => (
-                <td key={cell.id}>
+                <td key={cell.id} >
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
               ))}

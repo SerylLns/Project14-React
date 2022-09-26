@@ -2,7 +2,7 @@ import { screen } from "@testing-library/react";
 import { store } from "../app/store";
 import { addEmployee } from "../features/employeeSlice";
 
-const employeeTest = {
+export const employeeTest = {
   firstName: "User",
   lastName: "Test",
   birthdate: "01/01/1994",
