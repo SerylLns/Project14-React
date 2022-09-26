@@ -22,10 +22,7 @@ const EmployeeForm = () => {
     },
     validationSchema: employeeSchema,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-      console.log("Formik value:", formik.values);
       dispatch(addEmployee(formik.values));
-      // addUser(formik.values);
     },
   });
   return (
@@ -43,6 +40,7 @@ const EmployeeForm = () => {
         id="first-name"
       />
       <small
+        data-testid="firstNameError"
         className={`error-form ${formik.errors?.firstName ? "active" : ""}`}
       >
         {formik.errors.firstName}
@@ -57,6 +55,7 @@ const EmployeeForm = () => {
         id="last-name"
       />
       <small
+        data-testid="lastNameError"
         className={`error-form ${formik.errors?.lastName ? "active" : ""}`}
       >
         {formik.errors.lastName}
@@ -70,9 +69,7 @@ const EmployeeForm = () => {
         onChange={formik.handleChange}
         type="date"
       />
-      <small className="error-form">
-        {<formik className="errors birthdate"></formik>}
-      </small>
+      <small className="error-form">{formik.errors.birthdate}</small>
 
       <label htmlFor="start-date">Start Date</label>
       <input
@@ -86,7 +83,6 @@ const EmployeeForm = () => {
 
       <fieldset className="address">
         <legend>Address</legend>
-
         <label htmlFor="street">Street</label>
         <input
           id="street"
@@ -95,8 +91,9 @@ const EmployeeForm = () => {
           onChange={formik.handleChange}
           type="text"
         />
-        <small className="error-form">{formik.errors.street}</small>
-
+        <small data-testid="streetError" className="error-form">
+          {formik.errors.street}
+        </small>
         <label htmlFor="city">City</label>
         <input
           id="city"
@@ -106,7 +103,6 @@ const EmployeeForm = () => {
           type="text"
         />
         <small className="error-form">{formik.errors.city}</small>
-
         <label htmlFor="state">State</label>
         <select
           name="state"
@@ -119,7 +115,6 @@ const EmployeeForm = () => {
           ))}
         </select>
         <small className="error-form">{formik.errors.state}</small>
-
         <label htmlFor="zip-code">Zip Code</label>
         <input
           id="zip-code"
