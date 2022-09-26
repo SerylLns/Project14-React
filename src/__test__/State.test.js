@@ -1,4 +1,3 @@
-import { screen } from "@testing-library/react";
 import { store } from "../app/store";
 import { addEmployee } from "../features/employeeSlice";
 

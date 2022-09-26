@@ -1,7 +1,7 @@
 {
   "name": "p14-react",
   "version": "0.1.0",
-  "homepage": "https://seryllns.github.io/Project14-React",
+  "homepage": "https://SerylLns.github.io/Project14-React",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
