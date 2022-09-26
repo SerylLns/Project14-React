@@ -1,4 +1,3 @@
-import New from "../containers/New";
 import userEvent from "@testing-library/user-event";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
@@ -16,12 +15,10 @@ describe("New employee form test", () => {
       </MemoryRouter>
     );
     userEvent.type(screen.getByLabelText(/first Name/i), "az");
-    // userEvent.click(screen.getByRole("button", { name: /submit/i }));
     expect(
       await screen.findByText(/firstName must be at least 3 characters/i)
     ).toBeVisible();
     expect(await screen.findByTestId("firstNameError")).toHaveClass("active");
     expect(await screen.findByTestId("lastNameError")).toHaveClass("active");
-    // expect(await screen.findByTestId("streetError")).toHaveClass("active");
   });
 });
