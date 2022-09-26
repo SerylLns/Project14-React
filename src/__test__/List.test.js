@@ -17,7 +17,6 @@ describe("Test list", () => {
       </MemoryRouter>
     );
     const list = screen.getByTestId("list-table");
-    // console.log(screen.getByTestId("list-table"));
     expect(list).toHaveTextContent(employeeTest.firstName);
     expect(list).toHaveTextContent(employeeTest.lastName);
     expect(list).toHaveTextContent(employeeTest.city);
