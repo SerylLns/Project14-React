@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import {
   createColumnHelper,
@@ -10,10 +10,10 @@ import { useSelector } from "react-redux";
 
 const List = () => {
   const employees = useSelector(state => state.employees);
+  
   const data = [...employees];
 
   const columnHelper = createColumnHelper()
-
   const columns = [
     columnHelper.accessor((row) => row.firstName, {
       id: "firstName",

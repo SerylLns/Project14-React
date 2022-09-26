@@ -2,7 +2,6 @@ import React from "react";
 import { states } from "../utils";
 import { useFormik } from "formik";
 import { employeeSchema } from "../validations/EmployeeValidation";
-// import { EmployeeContext } from "../context/EmployeeContext";
 import { useDispatch } from "react-redux";
 import { addEmployee } from "../features/employeeSlice";
 

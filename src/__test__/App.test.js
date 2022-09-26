@@ -2,13 +2,17 @@ import {
   render,
   screen,
 } from "@testing-library/react";
+import { Provider } from "react-redux";
 import { MemoryRouter } from "react-router-dom";
 import App from "../App";
+import { store } from "../app/store";
 
 test("renders Homepage to root", async () => {
   render(
     <MemoryRouter initialEntries={["/"]}>
-      <App></App>
+      <Provider store={store}>
+        <App></App>
+      </Provider>
     </MemoryRouter>
   );
   
@@ -18,7 +22,9 @@ test("renders Homepage to root", async () => {
 test("renders Employee form to /new", async () => {
   render(
     <MemoryRouter initialEntries={["/new"]}>
-      <App></App>
+      <Provider store={store}>
+        <App></App>
+      </Provider>
     </MemoryRouter>
   );
 
