@@ -19,9 +19,6 @@ const New = () => {
           <EmployeeForm />
         </LocalizationProvider>
       </div>
-      <div id="confirmation" className="modal">
-        Employee Created!
-      </div>
     </>
   );
 };

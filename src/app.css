@@ -45,3 +45,7 @@ label {
   color: red;
   font-weight: 500;
 }
+
+#margin-dense {
+  margin: 15px;
+}

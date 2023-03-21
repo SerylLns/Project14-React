@@ -1,4 +1,4 @@
-import { object, string, number, date } from "yup";
+import { object, string, number } from "yup";
 
 export const employeeSchema = object().shape({
   firstName: string().min(3).required("First name required"),
