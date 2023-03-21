@@ -1,7 +1,7 @@
 {
   "name": "p14-react",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "https://seryllns.github.io/Project14-React",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.10.6",
