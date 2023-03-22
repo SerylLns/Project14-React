@@ -49,7 +49,6 @@ const EmployeeForm = () => {
   }
   return (
     <>
-      <button onClick={() => setOpen(true)}>dksdks</button>
       <form
         data-testid="employee-form"
         onSubmit={formik.handleSubmit}
@@ -102,7 +101,6 @@ const EmployeeForm = () => {
         >
           {formik.errors.birthdate}
         </small>
-
         <label htmlFor="start-date">Start Date</label>
         <DatePicker
           placeholder="Start date"
